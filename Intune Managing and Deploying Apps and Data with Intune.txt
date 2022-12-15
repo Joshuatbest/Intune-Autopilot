@@ -1,0 +1,11 @@
+Managing and Deploying Apps and Data with Intune. 
+1.)	Assigning apps using Intune Endpoint.microsoft.com > apps > all apps > windows, iOS, android, macOS 
+2.)	Deploying apps to a group of devices using Intune. 
+Groups > Windows Devices > Device OS type equals windows. 
+3.)	Deploying apps by using Microsoft store for Business, users can go to the store and download these apps without admin rights so its available to them out of the gate. 
+Bussinessstore.microsoft.com comes with Microsoft 365 subscription. 
+Manage > settings > assign permissions for the purchaser role. , you can create a collection (department) so you can add apps for that department that they can download. 
+4.)	Looking at the Office 365 Subscription 
+Different subscription types. 
+5.)	Customizing the office 365 ProPlus Deployment with Office Deployment tool and OCT 
+ODT is a tool you can customize the office365 apps. You have to use XML in order to have it deploy the way you want it. And OCT allows you to make the office deployable via Intune. 
