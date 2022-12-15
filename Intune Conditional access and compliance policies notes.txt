@@ -51,11 +51,6 @@ System Security Settings
 Password require complex password (redefine the password policy. 
 Set the actions for noncompliance whether that’s blocking or logging. Scope tags, assignments (who gets the compliance policy) 
 
-Notes on issue with the Configuration policy: Devices show conflicts and error with the antivrus protection policy under the system account (there is a conflict) error with NSW-Wi-Fi policy (checked omars account. 
-
-On Tyler’s account conflict with the Microsoft defender AV. 
-Also issue with real time protection and password length. (looks like windows defender is blocking the policy and windows defender needs to be updated to allow real time protection. 
-Note on issue with Compliance: real-time protection is not compliant. 
 
 
 
