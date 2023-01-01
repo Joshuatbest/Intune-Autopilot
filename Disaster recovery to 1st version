@@ -1,0 +1,20 @@
+# Install the SharePoint Online Management Shell module
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+
+# Connect to SharePoint Online
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+
+# Set the URL of the directory you want to download
+$directoryUrl = "https://contoso.sharepoint.com/sites/site1/documents/directory"
+
+# Download the directory and retrieve the first version of the files
+Get-SPOFile -Directory $directoryUrl -Recurse | ForEach-Object {
+  $fileUrl = $_.ServerRelativeUrl
+  $file = Get-SPOFile -Url $fileUrl
+  $versions = Get-SPOFileVersion -Url $fileUrl
+  $firstVersion = $versions[$versions.Count - 1]
+  $fileStream = $firstVersion.OpenBinaryStream()
+  $fileName = $file.Name -replace ".royal", ""
+  $filePath = "C:\downloads\$fileName"
+  $fileStream.SaveToFile($filePath)
+}
